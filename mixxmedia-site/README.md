@@ -50,8 +50,8 @@ HerWhispr now says what it is; it still needs enough detail to earn its own page
 
 | Property | Where the placeholder is | Status |
 | --- | --- | --- |
-| **HerWhispr** | `ventures.html`, "Newer ventures" | Listed as a book app for women — needs platform, catalogue/reading experience, launch status, URL |
-| **Herzog** | `ventures.html`, "Newer ventures" | Name only — no copy |
+| **HerWhispr** | `ventures.html`, its own section | Listed as a book app for women — needs platform, catalogue/reading experience, launch status, URL |
+| **Herzog** | `games.html`, slate | Listed as an original game in development — needs genre, platform, audience, status |
 | **Elite Sport** | `sports.html`, "Our properties" | Named, needs description + link |
 | **Second sports site** | `sports.html`, "Our properties" | Name unknown |
 | **Hockey game** | `games.html`, slate | Listed as in development; confirm platform, audience and working title |
