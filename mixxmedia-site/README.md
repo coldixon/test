@@ -52,7 +52,7 @@ HerWhispr now says what it is; it still needs enough detail to earn its own page
 | --- | --- | --- |
 | **HerWhispr** | `ventures.html`, its own section | Listed as a book app for women — needs platform, catalogue/reading experience, launch status, URL |
 | **Herzog** | `games.html`, slate | Listed as an original game in development — needs genre, platform, audience, status |
-| **Elite Sport** | `sports.html`, "Our properties" | Named, needs description + link |
+| **Elite Sport** | `sports.html`, "Our properties" | Listed as a sports AI platform (AI coaching + tournament hosting) — needs sports covered, what the coaching returns, live status, URL |
 | **Second sports site** | `sports.html`, "Our properties" | Name unknown |
 | **Hockey game** | `games.html`, slate | Listed as in development; confirm platform, audience and working title |
 
