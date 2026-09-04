@@ -43,13 +43,14 @@ Pages. No configuration needed. Point `mixxmedia.co` at whichever you choose.
 
 ## Copy I still need from you
 
-Three properties came up with nothing in the source material, so rather than
-invent claims about real brands I left clearly-marked placeholders. Each needs
-one or two sentences — what it is, who it is for, where it stands, and a URL:
+Several properties came up with nothing in the source material, so rather than
+invent claims about real brands they are clearly-marked placeholders. Each needs
+one or two sentences — what it is, who it is for, where it stands, and a URL.
+HerWhispr now says what it is; it still needs enough detail to earn its own page:
 
 | Property | Where the placeholder is | Status |
 | --- | --- | --- |
-| **HerWhispr** | `ventures.html`, "Newer ventures" | Name only — no copy |
+| **HerWhispr** | `ventures.html`, "Newer ventures" | Listed as a book app for women — needs platform, catalogue/reading experience, launch status, URL |
 | **Herzog** | `ventures.html`, "Newer ventures" | Name only — no copy |
 | **Elite Sport** | `sports.html`, "Our properties" | Named, needs description + link |
 | **Second sports site** | `sports.html`, "Our properties" | Name unknown |
