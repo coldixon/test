@@ -11,8 +11,8 @@
   --ink: #0b0d12;
   --ink-soft: #161a23;
   --ink-line: #262c39;
-  --paper: #faf7f2;
-  --paper-warm: #f2ece3;
+  --paper: #f8f7fb;
+  --paper-warm: #efedf6;
   --white: #ffffff;
 
   /* Pillar accents */
@@ -25,12 +25,12 @@
 
   /* Semantic */
   --accent: var(--violet);
-  --text: #14171f;
-  --text-muted: #5a6072;
+  --text: #16141f;
+  --text-muted: #5c5870;
   --text-invert: #f6f4f0;
   --text-invert-muted: #a8b0c2;
-  --line: #e2dbd0;
-  --line-strong: #cdc3b4;
+  --line: #e4e1ec;
+  --line-strong: #cfcadd;
 
   /* Space + shape */
   --gutter: clamp(1.25rem, 4vw, 3rem);
@@ -44,8 +44,9 @@
   --shadow: 0 2px 4px rgba(11, 13, 18, .05), 0 12px 32px rgba(11, 13, 18, .08);
   --shadow-lg: 0 4px 8px rgba(11, 13, 18, .06), 0 24px 64px rgba(11, 13, 18, .14);
 
-  --font-display: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-ui: var(--font-body);
 
   --ease: cubic-bezier(.22, 1, .36, 1);
 }
@@ -91,15 +92,16 @@ a:hover { text-decoration-color: currentColor; }
 /* 3 — Type --------------------------------------------------------------- */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -.022em;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.012em;
   text-wrap: balance;
 }
+h1, h2 { font-variation-settings: "SOFT" 20, "WONK" 1; }
 h1 { font-size: clamp(2.5rem, 1.6rem + 4.2vw, 4.5rem); }
 h2 { font-size: clamp(1.9rem, 1.4rem + 2.2vw, 3rem); }
-h3 { font-size: clamp(1.25rem, 1.1rem + .8vw, 1.6rem); line-height: 1.2; }
-h4 { font-size: 1.0625rem; letter-spacing: -.01em; }
+h3 { font-size: clamp(1.2rem, 1.08rem + .7vw, 1.5rem); line-height: 1.22; font-weight: 600; }
+h4 { font-size: 1.0625rem; letter-spacing: -.005em; }
 
 p { text-wrap: pretty; }
 p + p { margin-top: 1em; }
@@ -115,7 +117,7 @@ p + p { margin-top: 1em; }
   display: inline-flex;
   align-items: center;
   gap: .55rem;
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: .78rem;
   font-weight: 600;
   letter-spacing: .13em;
@@ -150,6 +152,9 @@ p + p { margin-top: 1em; }
 .grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
 .grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.5rem), 1fr)); }
 .grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr)); }
+/* Exactly two columns, so a set of four reads as 2x2 instead of 3 + 1. */
+.grid--pair { grid-template-columns: 1fr; }
+@media (min-width: 52rem) { .grid--pair { grid-template-columns: 1fr 1fr; } }
 
 .split {
   display: grid;
@@ -211,9 +216,9 @@ p + p { margin-top: 1em; }
   align-items: center;
   gap: .6rem;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -.03em;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -.01em;
   text-decoration: none;
   color: var(--ink);
 }
@@ -230,6 +235,7 @@ p + p { margin-top: 1em; }
 }
 .nav__links a {
   position: relative;
+  font-family: var(--font-ui);
   font-size: .95rem;
   font-weight: 500;
   text-decoration: none;
@@ -351,7 +357,7 @@ p + p { margin-top: 1em; }
   padding: .8rem 1.4rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: .95rem;
   font-weight: 600;
   letter-spacing: -.01em;
@@ -379,7 +385,7 @@ p + p { margin-top: 1em; }
   display: inline-flex;
   align-items: center;
   gap: .4rem;
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-weight: 600;
   font-size: .95rem;
   color: var(--accent);
@@ -413,7 +419,7 @@ a.card:hover, .card--link:hover {
 
 .card__tag {
   align-self: flex-start;
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: .72rem;
   font-weight: 600;
   letter-spacing: .1em;
@@ -434,7 +440,7 @@ a.card:hover, .card--link:hover {
 /* Pillar card with big index number */
 .pillar { --accent: var(--violet); }
 .pillar__num {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: .8rem;
   font-weight: 700;
   letter-spacing: .12em;
@@ -459,8 +465,9 @@ a.card:hover, .card--link:hover {
 }
 .stat__value {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(2.1rem, 1.5rem + 2.2vw, 3.15rem);
+  font-weight: 600;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
   line-height: 1;
   letter-spacing: -.03em;
   color: var(--accent);
@@ -468,43 +475,34 @@ a.card:hover, .card--link:hover {
 .stat__label { margin-top: .5rem; font-size: .92rem; color: var(--text-muted); }
 .band-dark .stat__label { color: var(--text-invert-muted); }
 
-/* Feature media panel (stands in for photography) */
+/* Feature media panel — holds the illustrated SVG artwork */
 .media {
   position: relative;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: linear-gradient(140deg,
-    color-mix(in srgb, var(--accent) 85%, #000) 0%,
-    color-mix(in srgb, var(--accent) 55%, var(--ink)) 55%,
-    var(--ink) 100%);
+  background: var(--paper-warm);
   box-shadow: var(--shadow-lg);
-  display: grid;
-  place-items: center;
-  color: rgba(255,255,255,.92);
   isolation: isolate;
 }
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* A hairline inside the radius keeps the art from floating on the ground. */
 .media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(60% 45% at 22% 18%, rgba(255,255,255,.22), transparent 70%),
-    radial-gradient(40% 40% at 82% 78%, rgba(255,255,255,.14), transparent 70%);
-  mix-blend-mode: screen;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(11, 13, 18, .1);
+  pointer-events: none;
 }
-.media img { width: 100%; height: 100%; object-fit: cover; }
-.media__caption {
-  position: relative;
-  z-index: 1;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.25rem, 1rem + 1.4vw, 2rem);
-  letter-spacing: -.02em;
-  text-align: center;
-  padding: 1.5rem;
-  max-width: 20ch;
-}
+.band-dark .media::after { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12); }
+
+.media--tall { aspect-ratio: 5 / 4; }
 
 /* Lists */
 .ticks { list-style: none; padding: 0; display: grid; gap: .85rem; }
@@ -538,7 +536,7 @@ a.card:hover, .card--link:hover {
   border-bottom: 1px solid var(--line);
 }
 .spec-list dt { color: var(--text-muted); font-size: .95rem; }
-.spec-list dd { margin: 0; font-weight: 600; font-family: var(--font-display); }
+.spec-list dd { margin: 0; font-weight: 600; font-family: var(--font-ui); }
 
 /* Table */
 .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
@@ -546,7 +544,7 @@ table { width: 100%; border-collapse: collapse; min-width: 34rem; }
 caption { text-align: left; padding: 1rem 1.25rem 0; color: var(--text-muted); font-size: .9rem; }
 th, td { padding: .95rem 1.25rem; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
 thead th {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: .78rem;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -554,7 +552,7 @@ thead th {
   background: var(--paper-warm);
 }
 tbody tr:last-child td { border-bottom: 0; }
-td strong { font-family: var(--font-display); }
+td strong { font-family: var(--font-ui); }
 .tag-pop {
   display: inline-block;
   margin-left: .5rem;
@@ -573,9 +571,10 @@ td strong { font-family: var(--font-display); }
 }
 .quote blockquote {
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 1rem + .8vw, 1.5rem);
-  line-height: 1.35;
-  letter-spacing: -.02em;
+  font-size: clamp(1.2rem, 1rem + .9vw, 1.6rem);
+  line-height: 1.32;
+  letter-spacing: -.01em;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
 }
 .quote figcaption { margin-top: 1rem; font-size: .92rem; color: var(--text-muted); }
 
@@ -652,6 +651,7 @@ td strong { font-family: var(--font-display); }
 }
 .site-footer .brand { color: var(--text-invert); }
 .footer__col h4 {
+  font-family: var(--font-ui);
   color: var(--text-invert);
   font-size: .78rem;
   letter-spacing: .12em;

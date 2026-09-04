@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Event pins across a grid of cities, with Houston, Atlanta and DC marked">
+  <defs>
+    <linearGradient id="j-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6a4d"/><stop offset="1" stop-color="#8f1d10"/>
+    </linearGradient>
+    <g id="pin">
+      <path d="M0-34c-13 0-24 11-24 24 0 17 24 40 24 40s24-23 24-40c0-13-11-24-24-24z" fill="#fffdf9"/>
+      <circle cy="-10" r="9" fill="#8f1d10"/>
+    </g>
+  </defs>
+  <rect width="800" height="600" fill="url(#j-bg)"/>
+
+  <!-- lattice of cities -->
+  <g stroke="#ffffff" opacity=".16" stroke-width="2">
+    <path d="M80 150h640M80 300h640M80 450h640"/>
+    <path d="M180 90v420M400 90v420M620 90v420"/>
+  </g>
+  <g fill="#ffffff" opacity=".38">
+    <circle cx="180" cy="150" r="7"/><circle cx="620" cy="150" r="7"/>
+    <circle cx="180" cy="300" r="7"/><circle cx="400" cy="300" r="7"/>
+    <circle cx="180" cy="450" r="7"/><circle cx="620" cy="450" r="7"/>
+    <circle cx="290" cy="225" r="5"/><circle cx="510" cy="225" r="5"/>
+    <circle cx="290" cy="375" r="5"/><circle cx="510" cy="375" r="5"/>
+  </g>
+
+  <g font-family="Georgia, serif" font-size="24" fill="#fffdf9">
+    <use href="#pin" x="400" y="150"/><text x="400" y="214" text-anchor="middle">Houston</text>
+    <use href="#pin" x="620" y="300"/><text x="620" y="364" text-anchor="middle">Atlanta</text>
+    <use href="#pin" x="400" y="450"/><text x="400" y="514" text-anchor="middle">Washington DC</text>
+  </g>
+
+  <!-- the day itself -->
+  <g transform="translate(660 96)">
+    <circle r="46" fill="#1f9d55"/>
+    <text y="-4" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#fffdf9" text-anchor="middle">19</text>
+    <text y="22" font-family="Georgia, serif" font-size="17" fill="#fffdf9" text-anchor="middle" opacity=".85">JUNE</text>
+  </g>
+</svg>

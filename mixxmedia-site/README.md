@@ -20,7 +20,7 @@ mixxmedia-site/
     ├── css/styles.css  Whole design system, sectioned and commented
     ├── js/main.js      Mobile nav, sticky header, scroll reveal, footer year
     ├── img/favicon.svg
-    └── img/            Drop real photography and logos here
+    └── img/art-*.svg   Original illustrations, one per section
 ```
 
 Navigation is deliberately just **Ventures · Consulting · Contact**. As the
@@ -54,6 +54,7 @@ HerWhispr now says what it is; it still needs enough detail to earn its own page
 | **Herzog** | `games.html`, slate | Listed as an original game in development — needs genre, platform, audience, status |
 | **Elite Sport** | `sports.html`, "Our properties" | Listed as a sports AI platform (AI coaching + tournament hosting) — needs sports covered, what the coaching returns, live status, URL |
 | **Second sports site** | `sports.html`, "Our properties" | Name unknown |
+| **blackevents.us** | `ventures.html`, Platforms | Confirmed as yours — needs what it covers, how it relates to JuneteenthEvents.us, scale, whether it sells advertising |
 | **Hockey game** | `games.html`, slate | Listed as in development; confirm platform, audience and working title |
 
 Each placeholder is wrapped in an HTML comment saying exactly what to send.
@@ -93,9 +94,11 @@ media kit and strategy doc). A few things still need your eyes:
 - **Street address.** Only "Upper Marlboro, MD" appears. Your documents carry a
   residential address; putting it on a public site invites mail you don't want.
 - **Phone number.** Same reasoning — add a business line if you'd like one shown.
-- **Photography.** Every image slot is currently a CSS gradient panel with a
-  caption. Drop real files into `assets/img/` and replace the `.media` divs with
-  `<img>` tags — the container already handles sizing and cropping.
+- **Photography.** There is none — I had no product or event photos to work
+  from. Every image is an original SVG illustration in `assets/img/art-*.svg`,
+  drawn in the site palette. They are real artwork, not placeholders, but if you
+  send photos of the deck, a tournament, or a Juneteenth event, swapping them in
+  is one line each: the `.media` container already handles sizing and cropping.
 - **Founder bios.** The about section names the company, not individuals beyond
   the Inklings inventors. Say the word if you want a proper leadership section.
 
@@ -105,8 +108,12 @@ media kit and strategy doc). A few things still need your eyes:
   (`theme-inklings`, `theme-games`, `theme-juneteenth`, `theme-consulting`) or on
   a single section. Everything else — buttons, tags, stat numbers, card hovers —
   inherits from `--accent` automatically.
-- Fonts are Space Grotesk (display) and Inter (body), loaded from Google Fonts
-  with system fallbacks.
+- Type is **Fraunces** for headings, the wordmark and figures, and **Public Sans**
+  for body and all UI (buttons, nav, labels, tables). Both from Google Fonts with
+  real fallback stacks. Fraunces is variable — headings use its SOFT and WONK
+  axes, which is where the warmth comes from.
+- Neutrals are biased toward the brand violet rather than being flat grey, and
+  the paper deliberately is not cream.
 - Header and footer markup are duplicated per page, since there is no build step.
   Change one, change all nine. If that becomes annoying, the natural next step is
   Eleventy or Astro with a shared layout.

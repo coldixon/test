@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="An open book on a phone screen">
+  <defs>
+    <linearGradient id="h-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc258"/><stop offset="1" stop-color="#a3540b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#h-bg)"/>
+  <circle cx="130" cy="120" r="150" fill="#ffffff" opacity=".1"/>
+
+  <g transform="translate(400 300)">
+    <!-- pages -->
+    <path d="M-250-140c70-28 140-28 244 0v300c-104-28-174-28-244 0z" fill="#fffdf9"/>
+    <path d="M250-140c-70-28-140-28-244 0v300c104-28 174-28 244 0z" fill="#fdf6ea"/>
+    <path d="M-6-140v300" stroke="#a3540b" stroke-width="4" opacity=".35"/>
+    <g stroke="#a3540b" stroke-width="7" stroke-linecap="round" opacity=".3">
+      <path d="M-212-72h176M-212-30h176M-212 12h140M-212 54h176M-212 96h108"/>
+      <path d="M36-64h176M36-22h176M36 20h176M36 62h140M36 104h176"/>
+    </g>
+    <!-- a bookmark -->
+    <path d="M150-168h44v128l-22-20-22 20z" fill="#ff5c43"/>
+  </g>
+</svg>
