@@ -1,53 +1,45 @@
-# Gatsby Portfolio Website
+# MixxMedia
 
-This repo contains a static website written with [GatsbyJS](https://www.gatsbyjs.org/), integrated with content coming from [DatoCMS](https://www.datocms.com).
+The MixxMedia website — a self-contained, static marketing site for a digital
+product studio building websites, mobile apps, games, and digital marketing.
 
-![Preview](preview.png)
+Built with plain HTML, CSS, and a touch of vanilla JavaScript. No build step,
+no framework, no external CMS — deploy the folder anywhere.
 
-[See the live demo](https://demo-datocms-gatsby.netlify.com/)
-
-If you want to use try this out yourself, you first need to set up a project on DatoCMS which will host your data.
-
-You can [sign up for a free account](https://dashboard.datocms.com/signup) and then you can simply click this button:
-
-[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/projects/new-from-template/static-website/gatsby-portfolio)
-
-## Repo usage
-
-First, install the dependencies of this project:
+## Structure
 
 ```
-yarn install
+index.html        Home
+services.html     Services (Web, Mobile, Marketing, Games, Consulting)
+about.html        About / mission / values
+contact.html      Contact info + inquiry form
+assets/
+  css/styles.css  Design system + all styling
+  js/main.js      Nav toggle, scroll reveals, contact form
+  img/logo.svg    Logo mark
 ```
 
-Add an `.env` file containing the read-only API token of your DatoCMS site:
+## Develop / preview
 
-```
-echo 'DATO_API_TOKEN=abc123' >> .env
-```
+It's static, so any local server works:
 
-Then, to run this website in development mode (with live-reload):
-
-```
-yarn develop
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
 ```
 
-To build the final, production ready static website:
+## Deploy
 
-```
-yarn build
-```
+Upload the repository contents to any static host (Netlify, Vercel, GitHub
+Pages, Cloudflare Pages, S3, etc.). No build command is required — the
+publish/output directory is the repository root.
 
-The final result will be saved in the `public` directory.
+## Notes / TODO
 
-## About
-
-The goal of this project is to show how easily you can create static sites using the content (text, images, links, etc.) stored on [DatoCMS](https://www.datocms.com). This project is configured to fetch data from a specific administrative area using [the API DatoCMS provides](https://www.datocms.com/docs/content-management-api).
-
-You can find further information about how to integrate DatoCMS with Gatsby in [our documentation](https://www.datocms.com/docs/static-generators/gatsbyjs).
-
-This websites uses:
-
-- [Yarn](https://yarnpkg.com/) as package manager;
-- [GatsbyJS](https://github.com/gatsbyjs/gatsby) as website generator;
-- [gatsby-source-datocms](https://github.com/datocms/gatsby-source-datocms) to integrate the website with DatoCMS.
+- The contact form has no backend. It currently opens the visitor's email
+  client (`mailto:`) prefilled with their message. To capture submissions
+  directly, wire the `#contact-form` in `assets/js/main.js` to a form
+  endpoint (e.g. Formspree, Netlify Forms, or your own API).
+- Replace the placeholder email `hello@mixxmedia.co` (in `contact.html` and
+  `assets/js/main.js`) with your real contact address.
+- Confirm the studio address and business hours in `contact.html`.
