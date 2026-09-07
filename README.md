@@ -11,11 +11,12 @@ no framework, no external CMS — deploy the folder anywhere.
 ```
 index.html        Home
 services.html     Services (Web, Mobile, Marketing, Games, Consulting)
+portfolio.html    Portfolio (filterable work grid)
 about.html        About / mission / values
 contact.html      Contact info + inquiry form
 assets/
   css/styles.css  Design system + all styling
-  js/main.js      Nav toggle, scroll reveals, contact form
+  js/main.js      Nav toggle, scroll reveals, portfolio filter, contact form
   img/logo.svg    Logo mark
 ```
 
@@ -43,3 +44,6 @@ publish/output directory is the repository root.
 - Replace the placeholder email `hello@mixxmedia.co` (in `contact.html` and
   `assets/js/main.js`) with your real contact address.
 - Confirm the studio address and business hours in `contact.html`.
+- `portfolio.html` uses **placeholder/sample projects**. Replace them with real
+  MixxMedia case studies (each `.work-card` has a `data-category` of
+  `web`, `mobile`, `games`, or `marketing` that the filter bar uses).

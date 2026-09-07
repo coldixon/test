@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — MixxMedia</title>
+  <meta name="description" content="Selected work from MixxMedia — websites, mobile apps, games, and digital marketing campaigns." />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand__mark" src="assets/img/logo.svg" alt="" />
+          <span>Mixx<span class="gradient-text">Media</span></span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="is-active">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav__cta"><a class="btn btn--primary" href="contact.html">Start a project</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow reveal">Our work</span>
+        <h1 class="reveal">Ideas we shipped, <span class="gradient-text">built to perform</span>.</h1>
+        <p class="reveal">A selection of websites, apps, games, and campaigns across industries. Filter by discipline to see how we approach each.</p>
+      </div>
+    </section>
+
+    <!-- NOTE: These are placeholder/sample projects. Replace with real MixxMedia case studies. -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="filter-bar reveal" role="tablist" aria-label="Filter work by discipline">
+          <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile Apps</button>
+          <button class="filter-btn" data-filter="games" aria-pressed="false">Games</button>
+          <button class="filter-btn" data-filter="marketing" aria-pressed="false">Marketing</button>
+        </div>
+
+        <div class="work-grid" id="work-grid">
+          <article class="work-card reveal" data-category="web">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 20% 10%, rgba(124,92,255,0.5), transparent 60%), radial-gradient(120% 120% at 90% 90%, rgba(34,211,238,0.4), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 9h20M6 21h12"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Web</span>
+              <h3>Aurora Commerce</h3>
+              <p>A headless e-commerce storefront rebuilt for speed — sub-second loads and a 30% lift in conversion.</p>
+              <div class="work-tags"><span class="work-tag">Web App</span><span class="work-tag">Headless CMS</span><span class="work-tag">Performance</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="mobile">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 15% 15%, rgba(34,211,238,0.5), transparent 60%), radial-gradient(120% 120% at 90% 85%, rgba(124,92,255,0.4), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Mobile</span>
+              <h3>Pulse Fitness</h3>
+              <p>A cross-platform fitness companion with live workout tracking, social challenges, and Apple Health sync.</p>
+              <div class="work-tags"><span class="work-tag">iOS &amp; Android</span><span class="work-tag">React Native</span><span class="work-tag">UX Design</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="games">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 20% 10%, rgba(255,78,205,0.45), transparent 60%), radial-gradient(120% 120% at 90% 90%, rgba(124,92,255,0.45), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4"/><circle cx="16" cy="10" r="1"/><circle cx="18.5" cy="13" r="1"/><rect x="2" y="6" width="20" height="12" rx="4"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Games</span>
+              <h3>Nova Arena</h3>
+              <p>A fast-paced 3D multiplayer arena shooter built in Unity, with matchmaking and cross-play.</p>
+              <div class="work-tags"><span class="work-tag">Unity</span><span class="work-tag">Multiplayer</span><span class="work-tag">3D</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="marketing">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 15% 15%, rgba(124,92,255,0.45), transparent 60%), radial-gradient(120% 120% at 90% 85%, rgba(255,78,205,0.4), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Marketing</span>
+              <h3>Bloom Botanicals</h3>
+              <p>An SEO and social growth campaign that tripled organic traffic and doubled email signups in six months.</p>
+              <div class="work-tags"><span class="work-tag">SEO</span><span class="work-tag">Social</span><span class="work-tag">Content</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="web">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 20% 10%, rgba(34,211,238,0.45), transparent 60%), radial-gradient(120% 120% at 90% 90%, rgba(124,92,255,0.4), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Web</span>
+              <h3>Northwind Dashboard</h3>
+              <p>A real-time SaaS analytics dashboard with custom data visualizations and role-based access.</p>
+              <div class="work-tags"><span class="work-tag">Web App</span><span class="work-tag">Data Viz</span><span class="work-tag">Dashboards</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="games">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 15% 15%, rgba(255,78,205,0.4), transparent 60%), radial-gradient(120% 120% at 90% 85%, rgba(34,211,238,0.4), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Games</span>
+              <h3>Puzzle Pop</h3>
+              <p>A colorful 2D match puzzle game for mobile with 200+ levels and daily challenges.</p>
+              <div class="work-tags"><span class="work-tag">2D</span><span class="work-tag">Mobile Game</span><span class="work-tag">Animation</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="mobile">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 20% 10%, rgba(124,92,255,0.5), transparent 60%), radial-gradient(120% 120% at 90% 90%, rgba(34,211,238,0.35), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Mobile</span>
+              <h3>Ledger Wallet</h3>
+              <p>A secure cross-platform finance app with budgeting, insights, and bank-grade encryption.</p>
+              <div class="work-tags"><span class="work-tag">Fintech</span><span class="work-tag">Security</span><span class="work-tag">API Integration</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="marketing">
+            <div class="work-card__visual" style="background:radial-gradient(120% 120% at 15% 15%, rgba(255,78,205,0.42), transparent 60%), radial-gradient(120% 120% at 90% 85%, rgba(124,92,255,0.42), transparent 60%), var(--surface-2);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__cat">Marketing</span>
+              <h3>Summit Launch</h3>
+              <p>An integrated product launch — paid media, landing pages, and content — that hit 1M impressions in week one.</p>
+              <div class="work-tags"><span class="work-tag">Paid Media</span><span class="work-tag">Launch</span><span class="work-tag">Content</span></div>
+            </div>
+          </article>
+        </div>
+
+        <p class="work-empty" id="work-empty" hidden>No projects in this category yet — check back soon.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Your project could be next.</h2>
+          <p>Tell us what you're building and let's make something worth showing off.</p>
+          <a class="btn btn--primary" href="contact.html">Start a project <span class="btn__arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img class="brand__mark" src="assets/img/logo.svg" alt="" />
+            <span>Mixx<span class="gradient-text">Media</span></span>
+          </a>
+          <p>A digital product studio building websites, apps, games, and marketing that move brands forward.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="services.html#web">Web</a>
+          <a href="services.html#mobile">Mobile Apps</a>
+          <a href="services.html#marketing">Marketing</a>
+          <a href="services.html#games">Games</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> MixxMedia. All rights reserved.</span>
+        <span>Upper Marlboro, MD</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

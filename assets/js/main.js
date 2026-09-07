@@ -68,6 +68,30 @@
     });
   }
 
+  // --- Portfolio filter ---
+  var filterBar = document.querySelector(".filter-bar");
+  if (filterBar) {
+    var cards = document.querySelectorAll("#work-grid .work-card");
+    var empty = document.querySelector("#work-empty");
+    filterBar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      var filter = btn.getAttribute("data-filter");
+      filterBar.querySelectorAll(".filter-btn").forEach(function (b) {
+        var active = b === btn;
+        b.classList.toggle("is-active", active);
+        b.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      var shown = 0;
+      cards.forEach(function (card) {
+        var match = filter === "all" || card.getAttribute("data-category") === filter;
+        card.hidden = !match;
+        if (match) shown++;
+      });
+      if (empty) empty.hidden = shown !== 0;
+    });
+  }
+
   // --- Footer year ---
   var yearEl = document.querySelector("#year");
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
