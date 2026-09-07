@@ -44,6 +44,8 @@ publish/output directory is the repository root.
 - Replace the placeholder email `hello@mixxmedia.co` (in `contact.html` and
   `assets/js/main.js`) with your real contact address.
 - Confirm the studio address and business hours in `contact.html`.
-- `portfolio.html` uses **placeholder/sample projects**. Replace them with real
-  MixxMedia case studies (each `.work-card` has a `data-category` of
-  `web`, `mobile`, `games`, or `marketing` that the filter bar uses).
+- `portfolio.html` lists real projects (EliteSportAI, HerWhispr, HERZOG,
+  EliteSport.ai). To add more, copy a `.work-card` and set its `data-category`
+  to `web`, `mobile`, or `games` (the value the filter bar matches). Add a
+  matching `data-filter` button to `.filter-bar` if you introduce a new
+  category.
