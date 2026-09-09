@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" role="img" aria-label="MixxMedia logo">
+  <defs>
+    <linearGradient id="mixxGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="37" height="37" rx="11" stroke="url(#mixxGrad)" stroke-width="2.2"/>
+  <path d="M9 28V13.5c0-.6.75-.87 1.13-.4L20 25l9.87-11.9c.38-.47 1.13-.2 1.13.4V28"
+        stroke="url(#mixxGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

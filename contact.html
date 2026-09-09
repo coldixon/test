@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — MixxMedia</title>
+  <meta name="description" content="Get in touch with MixxMedia. Tell us about your website, app, game, or marketing project and we'll be in touch." />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand__mark" src="assets/img/logo.svg" alt="" />
+          <span>Mixx<span class="gradient-text">Media</span></span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="is-active">Contact</a></li>
+          <li class="nav__cta"><a class="btn btn--primary" href="contact.html">Start a project</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow reveal">Contact</span>
+        <h1 class="reveal">Let's talk about <span class="gradient-text">what you're building</span>.</h1>
+        <p class="reveal">Tell us a little about your project and we'll get back to you with next steps.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Info -->
+          <div class="contact-info reveal">
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:hello@mixxmedia.co">hello@mixxmedia.co</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Studio</h4>
+                <p>704 Ardonia Ter<br />Upper Marlboro, MD 20774</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </div>
+              <div>
+                <h4>Hours</h4>
+                <p>Mon–Fri, 9am–6pm ET<br />Support available 24/7</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form class="form reveal" id="contact-form" data-mailto="hello@mixxmedia.co" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@company.com" />
+            </div>
+            <div class="field">
+              <label for="service">What can we help with?</label>
+              <select id="service" name="service">
+                <option value="">Select a service…</option>
+                <option>Web Services</option>
+                <option>Mobile App Development</option>
+                <option>Digital Marketing</option>
+                <option>Game Development</option>
+                <option>Consulting</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" required placeholder="Tell us about your project, goals, and timeline…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send message <span class="btn__arrow">→</span></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+            <p class="form__note">Prefer email? Reach us directly at <a href="mailto:hello@mixxmedia.co">hello@mixxmedia.co</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img class="brand__mark" src="assets/img/logo.svg" alt="" />
+            <span>Mixx<span class="gradient-text">Media</span></span>
+          </a>
+          <p>A digital product studio building websites, apps, games, and marketing that move brands forward.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="services.html#web">Web</a>
+          <a href="services.html#mobile">Mobile Apps</a>
+          <a href="services.html#marketing">Marketing</a>
+          <a href="services.html#games">Games</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> MixxMedia. All rights reserved.</span>
+        <span>Upper Marlboro, MD</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
