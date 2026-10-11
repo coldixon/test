@@ -20,7 +20,10 @@ Other commands:
 npm test          # engine + assistant unit tests (vitest)
 npm run typecheck # tsc --noEmit
 npm run build     # static export to ./out (any static host can serve it)
+npm run bundle    # one self-contained file: dist/together.html (open it directly, no server)
 ```
+
+The bundle is the whole app in a single HTML file with hash routing (`#plan`, `#money`, …). It is what the shareable preview is published from.
 
 No environment variables are needed. `.env.example` lists the one optional key for a future server.
 
